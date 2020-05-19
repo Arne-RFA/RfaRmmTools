@@ -4,7 +4,7 @@ This module is a wrapper for other modules which have vendor-specific names.
 
 ## Use Cases
 We will create GPOs and other global configurations that may require name changes over time. 
-For these global configs, we will use a generic name, defined HERE in this file. 
+For these global configs, we will use a generic name, defined in the PSM1 file. 
 
 ## Handling
 We will point all generic names to their equivalent vendor-name conterparts. 
