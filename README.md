@@ -12,6 +12,10 @@ Results displayed in-console will give detailed messages for status, including 1
 ### InTune
 This script is compatible with InTune because it will throw an error if it fails to install the agent or if the installed agent does not check in shortly after installation has completed. InTune recognizes the error as the script failing to complete, so it will eventually try running the script on the given device again. 
 
+## Troubleshooting
+Please see the wiki:
+https://rfatech.atlassian.net/wiki/spaces/AUTO
+
 ## Use Cases
 We will create GPOs and other global configurations that may require name changes over time. 
 For these global configs, we will use a generic name, defined in the PSM1 file. 
