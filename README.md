@@ -3,17 +3,26 @@ Abstraction for vendor-specific modules and other RMM tooling, for use in global
 This module is a wrapper for other modules which have vendor-specific names. 
 
 ### How to Use this Module on a Windows Device
-Open yourself an admin PowerShell and run this line after changing the number on the end to a known value, or 1 for generic.
+Open yourself an admin PowerShell. 
+#### Install the Agent
+Run this line after changing the number on the end to a known value, or 1 for generic.
 ```
 Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/RfaRmmTools/master/RfaRmmTools.psm1' )); Install-RfaRmmAgent 1; 
 ```
 Results displayed in-console will give detailed messages for status, including 1 final message at the end of the process that says either PASSED or FAILED to help you determine if the result was successful or not. 
 
+#### Uninstall the Agent
+Run this line.
+```
+Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/RfaRmmTools/master/RfaRmmTools.psm1' )); Start-RfaLtUninstaller;
+```
+There is no output expected for a successful result.
+
 ### InTune
 This script is compatible with InTune because it will throw an error if it fails to install the agent or if the installed agent does not check in shortly after installation has completed. InTune recognizes the error as the script failing to complete, so it will eventually try running the script on the given device again. 
 
 ## Troubleshooting
-Please see the wiki:
+Please see the wiki (RFA Staff Only):
 https://rfatech.atlassian.net/wiki/spaces/AUTO
 
 ## Use Cases
