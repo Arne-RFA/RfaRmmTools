@@ -14,7 +14,7 @@ Results displayed in-console will give detailed messages for status, including 1
 #### Uninstall the Agent
 Run this line.
 ```
-Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/RfaRmmTools/master/RfaRmmTools.psm1' )); Start-RfaLtUninstaller;
+Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/RfaRmmTools/master/RfaRmmTools.psm1' )); Uninstall-RfaRmmAgent;
 ```
 There is no output expected for a successful result.
 
