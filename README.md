@@ -16,7 +16,6 @@ Run this line.
 ```
 Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/RfaRmmTools/master/RfaRmmTools.psm1' )); Uninstall-RfaRmmAgent;
 ```
-There is no output expected for a successful result.
 
 ### InTune
 This script is compatible with InTune because it will throw an error if it fails to install the agent or if the installed agent does not check in shortly after installation has completed. InTune recognizes the error as the script failing to complete, so it will eventually try running the script on the given device again. 
