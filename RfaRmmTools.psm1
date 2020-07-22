@@ -13,6 +13,7 @@ Foreach ($uri in $OtherModules) {
 
 # Create generic aliases for vendor-specific functions
 New-Alias -Name 'Install-RfaRmmAgent' -Value 'Install-RfaCwaAgent' # Parameter LocationID must be at Position=0
+New-Alias -Name 'Uninstall-RfaRmmAgent' -Value 'Uninstall-RfaCwaAgent'
 
 
 # Load external functions (when you don't need the entire module for a few tasks)
