@@ -7,14 +7,14 @@ Open yourself an admin PowerShell.
 #### Install the Agent
 Run this line after changing the number on the end to a known value, or 1 for generic.
 ```
-Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/RfaRmmTools/master/RfaRmmTools.psm1' )); Install-RfaRmmAgent 1; 
+[Net.ServicePointManager]::SecurityProtocol=[enum]::GetNames([Net.SecurityProtocolType]) | Foreach-Object {[Net.SecurityProtocolType]::$_};Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/RfaRmmTools/master/RfaRmmTools.psm1' )); Install-RfaRmmAgent 1; 
 ```
 Results displayed in-console will give detailed messages for status, including 1 final message at the end of the process that says either PASSED or FAILED to help you determine if the result was successful or not. 
 
 #### Uninstall the Agent
 Run this line.
 ```
-Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/RfaRmmTools/master/RfaRmmTools.psm1' )); Uninstall-RfaRmmAgent;
+[Net.ServicePointManager]::SecurityProtocol=[enum]::GetNames([Net.SecurityProtocolType]) | Foreach-Object {[Net.SecurityProtocolType]::$_};Invoke-Expression (( new-object Net.WebClient ).DownloadString( 'https://raw.githubusercontent.com/RFAInc/RfaRmmTools/master/RfaRmmTools.psm1' )); Uninstall-RfaRmmAgent;
 ```
 
 ### InTune
