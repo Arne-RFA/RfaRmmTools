@@ -18,7 +18,7 @@ New-Alias -Name 'Uninstall-RfaRmmAgent' -Value 'Uninstall-RfaCwaAgent' -ea 0
 
 # Load external functions (when you don't need the entire module for a few tasks)
 $ExternalFunctions = @(
-    'https://raw.githubusercontent.com/tonypags/PsWinAdmin/master/Get-CimLocalDisk.ps1'
+    'https://raw.githubusercontent.com/RFAInc/PsWinAdmin/master/Get-CimLocalDisk.ps1'
 )
 Foreach ($uri in $ExternalFunctions) {
     $web.DownloadString($uri) | Invoke-Expression
